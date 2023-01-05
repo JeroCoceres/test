@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+
+{% block title %}Lista de ordenes{% endblock %}
+
+{% block content%}
+    <H1>Lista de Ordenes: </H1>
+    {% for orden in orders %}
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.es%2Ficono-gratis%2Fpedido_6384868&psig=AOvVaw3qOoksdSxk4m9KNRiN7-vg&ust=1672782969805000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMjeoKfwqfwCFQAAAAAdAAAAABAZ" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">La orden de: {{orders.name}}</h5>
+          <p class="card-text">Fue pagada en: {{orders.payment}}</p>
+          <p>En la siguiente fecha: {{orders.date}}</p>
+          <a href="#" class="btn btn-primary">Ver mas</a>
+        </div>
+      </div>    
+    {%endfor%}
+    {% endblock%}
